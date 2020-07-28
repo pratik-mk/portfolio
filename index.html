@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+	<section class="s1">
+		<div class="main-container">
+			<div class="greeting-wrapper">
+				<h1>Hi, I'm Pratik Dhoke</h1>
+			</div>
+
+
+			<div class="intro-wrapper">
+				<div class="nav-wrapper">
+
+					<!-- Link around dots-wrapper added after tutorial video -->
+					<a href="index.html">
+						<div class="dots-wrapper">
+							<div id="dot-1" class="browser-dot"></div>
+							<div id="dot-2" class="browser-dot"></div>
+							<div id="dot-3" class="browser-dot"></div>
+						</div>
+					</a>
+					
+
+					<ul id="navigation">
+						<li><a href="index.html#contact">Contact</a></li>
+
+					</ul>
+				</div>
+
+				<div class="left-column">
+					<img id="profile_pic" src="images/me.jpg">
+					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+
+					<div id="theme-options-wrapper">
+						<div data-mode="light" id="light-mode" class="theme-dot"></div>
+						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+						<div data-mode="green" id="green-mode" class="theme-dot"></div>
+						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+					</div>
+
+					<p id="settings-note">*Theme settings will be saved for<br>your next vist</p>
+				</div>
+
+				<div class="right-column">
+
+					<div id="preview-shadow">
+						<div id="preview">
+							<div id="corner-tl" class="corner"></div>
+							<div id="corner-tr" class="corner"></div>
+							<h3>Looking for job</h3>
+							<p>I wish to work in a growth oriented company and contribute to the development of the organization while upgrading my skill set and knowledge.</p>
+							<div id="corner-br" class="corner"></div>
+							<div id="corner-bl" class="corner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+
+			<div class="about-wrapper">
+				<div class="about-me">
+					<h4>More about me</h4>
+
+					<p>I am AI and ML enthusiasts.I have been doing many freelancing work in the past with many different technologies using mainly python and java. I have also had worked in security domain, doing bug hunting.</p>
+
+					<p>I am Looking for a great opportunity with a mid-large size firm where I can contribute towards upcoming technology innovations, which will suit my abilities and manage key project that impact the organization as well as broaden my scope of learning.</p>
+						<p>If the project domain is healthcare, then it will be cherry on the top.</p>
+
+
+					<hr>
+
+					<h4>Skills</h4>
+
+					<p> <a target="_blank" href="resume.pdf">Download Resume</a></p>
+
+					<div id="skills">
+						<ul>
+							<li>C</li>
+							<li>C++</li>
+							<li>Java & J2EE</li>
+							<li>Python</li>
+							<li>Django</li>
+						</ul>
+
+						<ul>
+							<li>Flask</li>
+							<li>Machine Learning</li>
+							<li>Git</li>
+							<li>SQL</li>
+							<li>Artificial Intelegence</li>
+						</ul>
+
+					</div>
+
+				</div>				
+				
+			</div>
+
+		</div>
+	</section>
+
+	<section class="s1">
+		<center><h1>Education</h1>></center>
+		<style>
+			* {
+			  box-sizing: border-box;
+			}
+			
+			body {
+			  background-color: #474e5d;
+			  font-family: Helvetica, sans-serif;
+			}
+			
+			/* The actual timeline (the vertical ruler) */
+			.timeline {
+			  position: relative;
+			  max-width: 1200px;
+			  margin: 0 auto;
+			}
+			
+			/* The actual timeline (the vertical ruler) */
+			.timeline::after {
+			  content: '';
+			  position: absolute;
+			  width: 6px;
+			  background-color: white;
+			  top: 0;
+			  bottom: 0;
+			  left: 50%;
+			  margin-left: -3px;
+			}
+			
+			/* Container around content */
+			.container {
+			  padding: 10px 40px;
+			  position: relative;
+			  background-color: inherit;
+			  width: 50%;
+			}
+			
+			/* The circles on the timeline */
+			.container::after {
+			  content: '';
+			  position: absolute;
+			  width: 25px;
+			  height: 25px;
+			  right: -17px;
+			  background-color: white;
+			  border: 4px solid #FF9F55;
+			  top: 15px;
+			  border-radius: 50%;
+			  z-index: 1;
+			}
+			
+			/* Place the container to the left */
+			.left {
+			  left: 0;
+			}
+			
+			/* Place the container to the right */
+			.right {
+			  left: 50%;
+			}
+			
+			/* Add arrows to the left container (pointing right) */
+			.left::before {
+			  content: " ";
+			  height: 0;
+			  position: absolute;
+			  top: 22px;
+			  width: 0;
+			  z-index: 1;
+			  right: 30px;
+			  border: medium solid white;
+			  border-width: 10px 0 10px 10px;
+			  border-color: transparent transparent transparent white;
+			}
+			
+			/* Add arrows to the right container (pointing left) */
+			.right::before {
+			  content: " ";
+			  height: 0;
+			  position: absolute;
+			  top: 22px;
+			  width: 0;
+			  z-index: 1;
+			  left: 30px;
+			  border: medium solid white;
+			  border-width: 10px 10px 10px 0;
+			  border-color: transparent white transparent transparent;
+			}
+			
+			/* Fix the circle for containers on the right side */
+			.right::after {
+			  left: -16px;
+			}
+			
+			/* The actual content */
+			.content {
+			  padding: 20px 30px;
+			  background-color: white;
+			  position: relative;
+			  border-radius: 6px;
+			}
+			
+			/* Media queries - Responsive timeline on screens less than 600px wide */
+			@media screen and (max-width: 600px) {
+			  /* Place the timelime to the left */
+			  .timeline::after {
+			  left: 31px;
+			  }
+			  
+			  /* Full-width containers */
+			  .container {
+			  width: 100%;
+			  padding-left: 70px;
+			  padding-right: 25px;
+			  }
+			  
+			  /* Make sure that all arrows are pointing leftwards */
+			  .container::before {
+			  left: 60px;
+			  border: medium solid white;
+			  border-width: 10px 10px 10px 0;
+			  border-color: transparent white transparent transparent;
+			  }
+			
+			  /* Make sure all circles are at the same spot */
+			  .left::after, .right::after {
+			  left: 15px;
+			  }
+			  
+			  /* Make all right containers behave like the left ones */
+			  .right {
+			  left: 0%;
+			  }
+			}
+			</style>
+		
+			<div class="timeline">
+			  <div class="container left">
+				<div class="content">
+				  <h3>2018-2021</h3>
+				  <h4><p>G H Raisoni College of Enginnering</p></h4>
+				  <p><h5>Bachlor of Engineering</h5></p>
+				  <p><h6>CGPA: 8.21</h6></p>
+				</div>
+			  </div>
+			  <div class="container right">
+				<div class="content">
+					<h3>2015-2018</h3>
+					<h4><p>Shree Datta Meghe Polytechnic</p></h4>
+					<p><h5>Diploma in Computer Technology</h5></p>
+					<p><h6>Percentage: 75.88</h6></p>
+				</div>
+			  </div>
+			  <div class="container left">
+				<div class="content">
+					<h3>2014-2015</h3>
+					<h4><p>School of Scholars</p></h4>
+					<p><h4>SSC</h5></p>
+					<p><h6>CGPA: 8.6 &emsp; Percentage: 79</h6></p>
+				</div>					  
+			  
+			</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+			<a href=""></a>
+			<h3 style="text-align: center;">Get In Touch</h3>
+
+			<form id="contact-form">
+				<a name="contact"></a>
+
+				<label>Name</label>
+				<input class="input-field" type="text" name="name">
+
+				<label>Subject</label>
+				<input class="input-field" type="text" name="subject">
+
+				<label>Email</label>
+				<input class="input-field" type="text" name="email">
+
+				<label>Message</label>
+				<textarea class="input-field" name="message"></textarea>
+
+				<input id="submit-btn" type="submit" value="Send">
+			</form>
+		</div>
+	</section> 
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
