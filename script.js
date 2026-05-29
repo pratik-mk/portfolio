@@ -17,29 +17,42 @@ themeBtn.addEventListener('click', () => {
 });
 
 /* ===== HAMBURGER MENU ===== */
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('nav-links');
+const hamburger  = document.getElementById('hamburger');
+const navLinks   = document.getElementById('nav-links');
+const navOverlay = document.getElementById('nav-overlay');
 
-hamburger.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
+function openNav() {
+    navLinks.classList.add('open');
+    hamburger.classList.add('open');
+    navOverlay.classList.add('visible');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    navOverlay.classList.remove('visible');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.contains('open') ? closeNav() : openNav();
 });
 
-// Close nav when any link is clicked
+// Close on overlay click (tap outside)
+navOverlay.addEventListener('click', closeNav);
+
+// Close on link click
 navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-    });
+    link.addEventListener('click', closeNav);
 });
 
-// Close nav on outside click
-document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-    }
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
 });
 
 /* ===== SCROLL REVEAL ===== */
